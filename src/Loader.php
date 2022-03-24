@@ -28,9 +28,9 @@ class Loader
                     $this->pluginsLoader($root);
                 } elseif (is_a($root, 'Closure') === true) {
                     $root = $root();
-                    if (strpos($root, $index) === false) {
-                        $root = $index . DIRECTORY_SEPARATOR . ltrim($root, DIRECTORY_SEPARATOR);
-                    }
+                    // if (strpos($root, $index) === false) {
+                    //     $root = $index . DIRECTORY_SEPARATOR . ltrim($root, DIRECTORY_SEPARATOR);
+                    // }
 
                     $this->pluginsLoader($root);
                 }
